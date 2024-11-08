@@ -1,10 +1,10 @@
 # Terragrunt will copy the Terraform files from the locations specified into this directory
 terraform {
-  source = "../.."
+  source = "../../.."
 }
 
 locals {
-  environment = "Development"
+  environment = "dev"
 }
 
 include {
@@ -13,7 +13,5 @@ include {
 
 # These are inputs that need to be passed for the terragrunt configuration
 inputs = {
-  tags = {
-    Environment = "${local.environment}"
-  }
+  env_prefix = "${local.environment}"
 }
