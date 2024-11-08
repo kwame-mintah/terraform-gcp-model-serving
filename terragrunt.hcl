@@ -5,8 +5,8 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 locals {
-  project_name   = "terraform-gcp-template"
-  gcp_project_id = ""
+  project_name   = "ml-gcp-model-serving"
+  gcp_project_id = "ultra-evening-438414-q7"
   gcp_region     = "europe-west2"
   gcp_zone       = "europe-west2-a"
   # Could use `find_in_parent_folders()` if file was in the parent directory.
@@ -62,5 +62,7 @@ remote_state {
 
 inputs = {
   gcp_region   = "${local.gcp_region}"
+  gcp_project  = "${local.gcp_project_id}"
+  gcp_zone     = "${local.gcp_zone}"
   project_name = "${local.project_name}"
 }
