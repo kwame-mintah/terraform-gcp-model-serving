@@ -1,6 +1,7 @@
-# Terraform Google Cloud Platform (GCP) Template
+# Terraform Google Cloud Platform (GCP) Model Serving
 
-The main purpose of this repository is to create a template for [Terraform](https://www.terraform.io/). This project will focus on the [GCP](https://registry.terraform.io/providers/hashicorp/google/latest) provider.
+The main purpose of this repository is to create resources needed for model serving using Google Cloud Platform (GCP) cloud functions.
+Notes can be found in my [notes-md](https://github.com/kwame-mintah/notes-md) repository. Model inference code can be found in [gcp-cloud-function-model-inference](https://github.com/kwame-mintah/gcp-cloud-function-model-inference).
 
 ## Development
 
