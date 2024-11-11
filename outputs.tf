@@ -12,7 +12,7 @@ output "github_action_service_account_key" {
     The GitHub service account private key in JSON format, base64 encoded.
 EOF
 
-  value     = google_service_account_key.github_actions_service_account_key[0].private_key
+  value     = base64decode(google_service_account_key.github_actions_service_account_key[0].private_key)
   sensitive = true
 }
 
@@ -21,7 +21,7 @@ output "prediction_service_account_key" {
     The prediction service private key in JSON format, base64 encoded.
 EOF
 
-  value     = google_service_account_key.prediction_service_account_key.private_key
+  value     = base64decode(google_service_account_key.prediction_service_account_key.private_key)
   sensitive = true
 }
 
