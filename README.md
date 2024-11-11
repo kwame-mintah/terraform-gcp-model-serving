@@ -39,7 +39,6 @@ Notes can be found in my [notes-md](https://github.com/kwame-mintah/notes-md) re
    ```
 
 > [!NOTE]
->
 > Please note that terragrunt will create a bucket for storing the remote state. Ensure the account deploying the
 > resources has the appropriate permissions to create or connect to these resources.
 
@@ -62,7 +61,6 @@ Code formatting and documentation for `variables` and `outputs` is generated usi
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK --->
-
 ## Requirements
 
 | Name | Version |
@@ -84,21 +82,34 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [google_artifact_registry_repository.prediction_service_registry](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/artifact_registry_repository) | resource |
+| [google_project_iam_binding.github_actions_registry_role](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_binding) | resource |
+| [google_project_iam_binding.prediction_service_account_role](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_binding) | resource |
+| [google_service_account.github_actions_service_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account) | resource |
+| [google_service_account.prediction_service_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account) | resource |
+| [google_service_account_key.github_actions_service_account_key](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account_key) | resource |
+| [google_service_account_key.prediction_service_account_key](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account_key) | resource |
+| [google_storage_bucket.mlflow_bucket](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket) | resource |
 | [google_project.project](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/project) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_gcp_default_labels"></a> [gcp\_default\_labels](#input\_gcp\_default\_labels) | The default region to manage resources in. | `map(string)` | `{}` | no |
+| <a name="input_env_prefix"></a> [env\_prefix](#input\_env\_prefix) | The prefix added to resources in the environment. | `string` | n/a | yes |
+| <a name="input_gcp_default_labels"></a> [gcp\_default\_labels](#input\_gcp\_default\_labels) | Labels that will be applied to all resources with a top level labels field or a labels<br>field nested inside a top level metadata field. | `map(string)` | `{}` | no |
 | <a name="input_gcp_project"></a> [gcp\_project](#input\_gcp\_project) | The default project to manage resources in. | `string` | n/a | yes |
 | <a name="input_gcp_region"></a> [gcp\_region](#input\_gcp\_region) | The default region to manage resources in. | `string` | n/a | yes |
 | <a name="input_gcp_zone"></a> [gcp\_zone](#input\_gcp\_zone) | The default zone to manage resources in. Generally, <br>this zone should be within the default region you specified. | `string` | n/a | yes |
+| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | The name of the project. | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_gcp_project_number"></a> [gcp\_project\_number](#output\_gcp\_project\_number) | The numeric identifier of the project. |
-
+| <a name="output_github_action_service_account_key"></a> [github\_action\_service\_account\_key](#output\_github\_action\_service\_account\_key) | The GitHub service account private key in JSON format, base64 encoded. |
+| <a name="output_predicition_service_docker_registry_id"></a> [predicition\_service\_docker\_registry\_id](#output\_predicition\_service\_docker\_registry\_id) | The prediction service docker registry ID. |
+| <a name="output_predicition_service_docker_registry_name"></a> [predicition\_service\_docker\_registry\_name](#output\_predicition\_service\_docker\_registry\_name) | The prediction service docker registry name. |
+| <a name="output_prediction_service_account_key"></a> [prediction\_service\_account\_key](#output\_prediction\_service\_account\_key) | The prediction service private key in JSON format, base64 encoded. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK --->
