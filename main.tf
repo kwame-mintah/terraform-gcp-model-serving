@@ -6,6 +6,8 @@ locals {
   github_actions_roles = [
     "roles/artifactregistry.writer",
     "roles/iam.serviceAccountTokenCreator",
+    "roles/serverless.serviceAgent",
+    "roles/run.admin",
   ]
 }
 
