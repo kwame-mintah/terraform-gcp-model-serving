@@ -6,7 +6,7 @@
 
 locals {
   project_name   = "ml-gcp-model-serving"
-  gcp_project_id = "ultra-evening-438414-q7"
+  gcp_project_id = read_terragrunt_config("environment.hcl").locals.project_id
   gcp_region     = "europe-west2"
   gcp_zone       = "europe-west2-a"
   # Could use `find_in_parent_folders()` if file was in the parent directory.
