@@ -17,6 +17,7 @@ locals {
 #---------------------------------------------------
 #trivy:ignore:AVD-GCP-0066
 resource "google_storage_bucket" "mlflow_bucket" {
+  #checkov:skip=CKV_GCP_62:out of scope for demonstration, won't be adding a logging bucket
   name                        = "${local.name_prefix}-mlflow-bucket"
   location                    = "EU"
   storage_class               = "STANDARD"
@@ -33,6 +34,7 @@ resource "google_storage_bucket" "mlflow_bucket" {
 # Registry
 #---------------------------------------------------
 resource "google_artifact_registry_repository" "prediction_service_registry" {
+  #checkov:skip=CKV_GCP_84:out of scope for demonstration, wont be creating a kms key involves additional permissions for service account
   location      = var.gcp_region
   repository_id = "${var.env_prefix}-prediction-service"
   description   = "Docker registry for prediction microservice"
