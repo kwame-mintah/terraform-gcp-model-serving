@@ -1,7 +1,7 @@
 # Terraform Google Cloud Platform (GCP) Model Serving
 
 The main purpose of this repository is to create resources needed for model serving using Google Cloud Platform (GCP) cloud functions.
-Notes can be found in my [notes-md](https://github.com/kwame-mintah/notes-md) repository. Model inference code can be found in [gcp-cloud-function-model-inference](https://github.com/kwame-mintah/gcp-cloud-function-model-inference).
+Notes can be found in my [notes-md](https://github.com/kwame-mintah/notes-md) repository. Model inference code can be found in [gcp-cloud-run-function-model-inference](https://github.com/kwame-mintah/gcp-cloud-run-function-model-inference).
 
 ## Development
 
@@ -58,6 +58,16 @@ Code formatting and documentation for `variables` and `outputs` is generated usi
 
 ```
 <!-- {BEGINNING|END} OF PRE-COMMIT-TERRAFORM DOCS HOOK --->
+```
+
+## Retrieving service account secrets for GitHub Action(s) and Model Inference Service
+
+Two service accounts are created and need to be referenced within the [gcp-cloud-run-function-model-inference](https://github.com/kwame-mintah/gcp-cloud-run-function-model-inference?tab=readme-ov-file#github-action-cicd) repository.
+In order to retrieve these secrets to be used elsewhere, the following command can be used:
+
+```shell
+terragrunt output -raw prediction_service_account_key > prediction_service_account.json \
+terragrunt output -raw github_action_service_account_key > github_action_service_account.json
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK --->
