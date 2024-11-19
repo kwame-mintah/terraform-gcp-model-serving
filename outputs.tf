@@ -25,15 +25,15 @@ EOF
   sensitive = true
 }
 
-output "predicition_service_docker_registry_id" {
+output "prediction_service_docker_registry_id" {
   description = <<-EOF
-    The prediction service docker registry ID.
+    The prediction service docker registry ID.s
 EOF
 
   value = google_artifact_registry_repository.prediction_service_registry.id
 }
 
-output "predicition_service_docker_registry_name" {
+output "prediction_service_docker_registry_name" {
   description = <<-EOF
     The prediction service docker registry name.
 EOF

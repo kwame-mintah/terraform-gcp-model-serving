@@ -119,7 +119,7 @@ No modules.
 |------|-------------|
 | <a name="output_gcp_project_number"></a> [gcp\_project\_number](#output\_gcp\_project\_number) | The numeric identifier of the project. |
 | <a name="output_github_action_service_account_key"></a> [github\_action\_service\_account\_key](#output\_github\_action\_service\_account\_key) | The GitHub service account private key in JSON format, base64 encoded. |
-| <a name="output_predicition_service_docker_registry_id"></a> [predicition\_service\_docker\_registry\_id](#output\_predicition\_service\_docker\_registry\_id) | The prediction service docker registry ID. |
-| <a name="output_predicition_service_docker_registry_name"></a> [predicition\_service\_docker\_registry\_name](#output\_predicition\_service\_docker\_registry\_name) | The prediction service docker registry name. |
 | <a name="output_prediction_service_account_key"></a> [prediction\_service\_account\_key](#output\_prediction\_service\_account\_key) | The prediction service private key in JSON format, base64 encoded. |
+| <a name="output_prediction_service_docker_registry_id"></a> [prediction\_service\_docker\_registry\_id](#output\_prediction\_service\_docker\_registry\_id) | The prediction service docker registry ID. |
+| <a name="output_prediction_service_docker_registry_name"></a> [prediction\_service\_docker\_registry\_name](#output\_prediction\_service\_docker\_registry\_name) | The prediction service docker registry name. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK --->
