@@ -27,7 +27,7 @@ EOF
 
 output "prediction_service_docker_registry_id" {
   description = <<-EOF
-    The prediction service docker registry ID.s
+    The prediction service docker registry ID.
 EOF
 
   value = google_artifact_registry_repository.prediction_service_registry.id
